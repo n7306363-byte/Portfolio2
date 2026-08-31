@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/nirmaimon/Desktop/Claude/Projects/Portfolio2/serve.py"],
+      "port": 58421
+    }
+  ]
+}
