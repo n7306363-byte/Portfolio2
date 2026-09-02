@@ -379,7 +379,8 @@ a.project-card:hover {
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
 }
 
-.case-image img {
+.case-image img,
+.case-image video {
   width: 100%;
   height: auto;
   display: block;
