@@ -69,7 +69,7 @@
     <div class="case-text">
       <p>The dashboard was designed to give employees a clear, centralized view of their most important payroll and attendance information. It brings together expense reports, approval statuses, time tracking, and key personal documents in one intuitive interface, reducing complexity and making everyday tasks faster and easier to manage.</p>
       <p>The goal was not simply to display information, but to prioritize what employees need most and turn a complex administrative system into a simple, actionable daily experience.</p>
-      <p><a class="inline-link" href="image 208.png" target="_blank" rel="noopener">The appearance of the old system</a></p>
+      <p><a class="inline-link" href="image 208.png" data-lightbox="image 208.png">The appearance of the old system</a></p>
     </div>
 
     <div class="case-image">
@@ -121,6 +121,40 @@
     </div>
   </section>
 </div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" data-lightbox-close aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="The appearance of the old system" />
+  </div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('[data-lightbox]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      lightboxImg.src = link.getAttribute('data-lightbox');
+      lightbox.classList.add('is-open');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightboxImg.src = '';
+  }
+
+  document.querySelectorAll('[data-lightbox-close]').forEach(function (el) {
+    el.addEventListener('click', closeLightbox);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
