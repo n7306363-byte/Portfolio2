@@ -229,7 +229,7 @@ a.project-card:hover {
 }
 
 .keep-in-touch .photo {
-  border-radius: 24px;
+  border-radius: 10px;
   overflow: hidden;
   width: 100%;
 }
